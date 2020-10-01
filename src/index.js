@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 ReactDOM.render(
-  React.createElement(
-    "div", 
-    {style: {color: "blue"}}, 
-    React.createElement("h1", null, "hi!")),
+  <ul>
+    <li>Hot Dogs</li>
+    <li>Hamburgers</li>
+    <li>Pizza</li>
+    <li>Sushi</li>
+  </ul>,
   document.getElementById('root')
 );
