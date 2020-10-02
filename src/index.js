@@ -14,19 +14,21 @@ function SkiResort() {
   )
 }
 
-// function App() {
-//   return (
-//     <>
-//       <Lake />
-//       <SkiResort />
-//     </>
-//   )
-// }
+function App({name}) {
+  return (
+    <>
+      <h1>{name}</h1>
+      <Lake />
+      <SkiResort />
+    </>
+  )
+}
 
 ReactDOM.render(
-  <>
-    <Lake />
-    <SkiResort />
-  </>,
+  <App name="GraphQL"/>,
   document.getElementById('root')
 );
+
+const [, , fruit] = ["popcorn", "pretzel", "pineapple"]
+
+console.log(fruit)
