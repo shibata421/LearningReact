@@ -2,19 +2,43 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-const list = [1, 2, 3, 4, 5]
-
-function App({items}) {
+function Lake({name}) {
   return (
-    <ul>
-      {items.map(item => (
-        <li key={item.toString()}>{item}</li>
-      ))}
-    </ul>
+    <div>
+      <h1>Visit {name}!</h1>
+    </div>
+  )
+}
+
+function SkiResort({name}) {
+  return (
+    <div>
+      <h1>Visit {name}!</h1>
+    </div>
+  )
+}
+
+function App(props) {
+  // if(props.season === "summer") {
+  //   return <Lake name="Jenny Lake"/>
+  // } else if (props.season === "winter") {
+  //   return <SkiResort name="JHMR"/>
+  // }
+  return (
+    <div>
+      {props.season === "summer" ? 
+        <Lake name="Jake Lake" /> 
+        : props.season === "winter" ?
+          <SkiResort name="JHMR"/>
+          : <h1>
+              Come back in the winter or summer!
+            </h1>
+      }
+    </div>
   )
 }
 
 ReactDOM.render(
-  <App items={list} />,
+  <App season="winter"/>,
   document.getElementById('root')
 );
